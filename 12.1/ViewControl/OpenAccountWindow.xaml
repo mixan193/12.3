@@ -1,0 +1,20 @@
+﻿<Window x:Name="OpenWindow" x:Class="_12._2.OpenAccountWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Открыть счёт" Height="223" Width="225" Topmost="True" Unloaded="OpenWindow_Closed" MinWidth="225" MaxWidth="225" MinHeight="225" MaxHeight="225">
+    <Grid>
+        <StackPanel x:Name="OK_Button" Margin="0,10,0,0" Height="144" VerticalAlignment="Top">
+            <RadioButton x:Name="CreditRadioButton" Content="Кредитный" Width="100" Checked="CreditRadioButton_Checked"/>
+            <RadioButton x:Name="DepositRadioButton" Content="Депозитный" Width="100" Checked="DepositRadioButton_Checked"/>
+            <CheckBox x:Name="CapitalisationCheckBox" Content="С капитализацией" Width="121" IsEnabled="False"/>
+            <TextBlock x:Name="RateTextBlock" TextWrapping="Wrap" Text="Введите процент" Width="100"/>
+            <TextBox x:Name="RateTextBox" TextWrapping="Wrap" Width="100" IsEnabled="False" PreviewTextInput="RateTextBox_PreviewTextInput"/>
+            <TextBlock x:Name="AmountTextBlock" TextWrapping="Wrap" Text="Введите сумму" Width="100"/>
+            <TextBox x:Name="AmountTextBox" TextWrapping="Wrap" Width="100" IsEnabled="False" PreviewTextInput="AmountTextBox_PreviewTextInput"/>
+            <Button x:Name="Open_Button" Content="Открыть" Width="100" IsEnabled="False" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
